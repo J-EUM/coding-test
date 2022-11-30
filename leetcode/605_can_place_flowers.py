@@ -25,13 +25,13 @@ class Solution(object):
                 else:
                     i += 3
 
-        if n > 0:
-            return False
-        else:
-            return True
+        # if n > 0:
+        #     return False
+        # else:
+        #     return True
+        return n <= 0
 # Runtime: 342 ms, faster than 24.76% of Python online submissions for Can Place Flowers.
 # Memory Usage: 13.6 MB, less than 89.94% of Python online submissions for Can Place Flowers.
-
 
 a = Solution()
 
