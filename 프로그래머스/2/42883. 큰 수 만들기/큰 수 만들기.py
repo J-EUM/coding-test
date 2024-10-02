@@ -1,10 +1,14 @@
 def solution(number, k):
-    answer = ''
-    for n in number:
-        while answer and answer[-1] < n and k > 0:
-            answer = answer[:-1]
+    collected = []
+    for i, num in enumerate(number):
+        while len(collected) > 0 and collected[-1] < num and k > 0:
+            collected.pop()
             k -= 1
-        answer += n
-    if k > 0:
-        answer = answer[:-k]
+        if k == 0:
+            collected += list(number[i:])
+            break
+        collected.append(num)
+        
+    collected = collected[:-k] if k > 0 else collected
+    answer = ''.join(collected)
     return answer
