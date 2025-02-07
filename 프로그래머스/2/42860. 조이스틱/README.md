@@ -1,6 +1,6 @@
 # [level 2] 조이스틱 - 42860 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42860#) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42860#qna) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 07일 19:02:19
+2025년 02월 07일 19:02:33
 
 ### 문제 설명
 
