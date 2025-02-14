@@ -1,0 +1,18 @@
+-- 코드를 입력하세요
+WITH member AS (
+    SELECT MEMBER_ID
+    FROM REST_REVIEW
+    GROUP BY 1
+    ORDER BY COUNT(1) DESC
+    LIMIT 1
+)
+SELECT 
+    mp.MEMBER_NAME, 
+    rr.REVIEW_TEXT,
+    DATE_FORMAT(rr.REVIEW_DATE, '%Y-%m-%d') AS REVIEW_DATE
+FROM member
+    JOIN MEMBER_PROFILE mp 
+        ON member.MEMBER_ID = mp.MEMBER_ID
+    JOIN REST_REVIEW rr 
+        ON mp.MEMBER_ID = rr.MEMBER_ID
+ORDER BY 3, 2;
