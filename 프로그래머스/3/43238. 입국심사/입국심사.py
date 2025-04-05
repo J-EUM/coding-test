@@ -1,6 +1,6 @@
 def solution(n, times):
     left = 1
-    right = max(times) * n  # 최악의 경우: 가장 느린 심사관이 모두 처리
+    right = min(times) * n  # 최악의 경우:
     answer = right
 
     while left <= right:
